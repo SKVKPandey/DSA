@@ -1,4 +1,4 @@
-/* Traversal And Insertion Of Element In Array In C
+/* Deletion Of Element From Array In C
 
 Author: Shashank Kashyap Vijay Kumar Pandey
 Date Of Creation: June 10, 2022 
@@ -19,27 +19,20 @@ void display(int arr[], int size) {
 
 } // Method for Traversal
 
-void insertion(int arr[], int size, int capacity, int index, int element) {
+void deletion(int arr[], int size, int index) {
 
-    if (size>=capacity){
-        printf("Invalid Insertion\n");
+    for (int i = index; i <= size - 1; i++){
+        arr[i] = arr[i+1];
     }
 
-    else {
-        for (int i = size-1; i >= index; i--){
-            arr[i+1] = arr[i];
-        }
-        arr[index] = element;
-    }
-
-} // Method for Insertion
+} // Method for Deletion
 
 int main() {
 
     int arr[100] = {5,4,8,12,45};
     display(arr, 5);
-    insertion(arr, 5, 100, 2, 99);
-    display(arr, 6);
+    deletion(arr, 5, 2);
+    display(arr, 4);
 
     return 0;
 
