@@ -1,7 +1,7 @@
-/* Kadane's Algorithm For Largest Sum Contiguous Array In C++
+/* LinearSearch For Arrays In C
 
 Author: Shashank Kashyap Vijay Kumar Pandey
-Date Of Creation: June 06, 2022 
+Date Of Creation: June 12, 2022 
 
 MIT LICENCE */
 
@@ -14,10 +14,8 @@ int linearSearch (int arr[], int size, int num) {
             return i;
         }
     }
-
     return -1;
-
-}
+} // Method for LinearSearch
 
 int main() {
 
@@ -27,5 +25,6 @@ int main() {
     printf("%d\n", linearSearch(myArray, sizeof(myArray), 589));
 
     return 0;
-
 }
+
+// References: CodeWithHarry DSA Course
